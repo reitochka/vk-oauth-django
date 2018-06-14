@@ -10,7 +10,7 @@
             <div class="card mb-3">
               <h3 class="card-header">Тестовое задание</h3>
               <div class="card-body">
-                <h5 class="card-title">Привет {{ user.last_name }} {{ user.first_name }}!</h5>
+                <h5 class="card-title">Привет {{ user.last_name }} {{ user.first_name }}! <a href="https://vk.com/{{ user.username }}" class="card-link">link to profile</a></h5>
             {#    <h6 class="card-subtitle text-muted">Support card subtitle</h6>#}
               </div>
               <img class="img-fluid" src="{{ image }}" alt="Card image">
@@ -33,9 +33,6 @@
                   {% endfor %}
                   </tbody>
                 </table>
-              </div>
-              <div class="card-body">
-                <a href="https://vk.com/{{ user.username }}" class="card-link">link to profile</a>
               </div>
             </div>
         </div>
