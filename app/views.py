@@ -16,4 +16,4 @@ def index(request):
     else:
         friends = []
 
-    return render(request, 'app/index.html', {'image': user.extra_data['photo_max'], 'friends': friends},)
+    return render(request, 'app/index.html', {'image': user.extra_data['photo_max_orig'], 'friends': friends},)
