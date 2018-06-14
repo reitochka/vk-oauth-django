@@ -97,7 +97,7 @@ AUTHENTICATION_BACKENDS = (
 
 # https://vk.com/dev/permissions
 SOCIAL_AUTH_VK_OAUTH2_SCOPE = ['friends ']
-SOCIAL_AUTH_VK_OAUTH2_EXTRA_DATA = ['photo_200_orig', 'friends.get']
+SOCIAL_AUTH_VK_OAUTH2_EXTRA_DATA = ['photo_max', 'friends.get']
 
 SOCIAL_AUTH_VK_OAUTH2_KEY = '6370358'
 SOCIAL_AUTH_VK_OAUTH2_SECRET = 'D9xiwgl4cBzUkQKBWOD9'
