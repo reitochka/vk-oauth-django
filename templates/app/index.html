@@ -11,16 +11,15 @@
               <h3 class="card-header">Тестовое задание</h3>
               <div class="card-body">
                 <h5 class="card-title">Привет {{ user.last_name }} {{ user.first_name }}! <a href="https://vk.com/{{ user.username }}" class="card-link">link to profile</a></h5>
-            {#    <h6 class="card-subtitle text-muted">Support card subtitle</h6>#}
               </div>
-              <img class="img-fluid" src="{{ image }}" alt="Card image">
+              <img class="img-fluid" src="{{ image }}">
               <div class="card-body">
                 <table class="table table-hover">
                   <thead>
                     <tr>
                       <th scope="col">Фамилия Имя</th>
-                      <th scope="col">ссылка</th>
-                      <th scope="col">онлайн</th>
+                      <th scope="col">Ссылка</th>
+                      <th scope="col">Онлайн</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -28,7 +27,12 @@
                     <tr>
                       <td>{{ friend.last_name }} {{ friend.first_name }}</td>
                       <td><a href="https://vk.com/{{ friend.domain }}">https://vk.com/{{ friend.domain }}</a></td>
-                      <td>{{ friend.online }}</td>
+                      <td> {% if friend.online %}
+                            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                           {% else %}
+                          <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                           {% endif %}
+                      </td>
                     </tr>
                   {% endfor %}
                   </tbody>
