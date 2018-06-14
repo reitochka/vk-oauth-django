@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card card-login mx-auto mt-5">
+              <div class="card-header">Авторизация</div>
+              <div class="card-body">
+            {#        <h4 class="card-title">Primary card title</h4>#}
+                <a href="{% url 'social:begin' 'vk-oauth2' %}">Вход через Вконтакте</a><br>
+              </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
